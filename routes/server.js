@@ -1,9 +1,11 @@
-var express = require('express');
-var router = express.Router();
+module.exports = function(db) {
+  const apiRoutes = require('../api/index')(db);
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+  let express = require('express');
+  let router = express.Router();
 
-module.exports = router;
+  router.post('/contact', apiRoutes.contact.contactProducers);
+  router.get('/status', apiRoutes.status.checkStatus);
+  
+  return router;
+}
