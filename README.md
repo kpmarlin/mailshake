@@ -6,3 +6,5 @@ Hello there.  Thanks for taking a look at my project.  I took the path less trav
 
 ## Running the App
 `npm start` is all you need.  That runs the backend and frontend.
+
+<http://localhost:3000/> is where you'll find the front end.  I used `fetch`, so you're going to want a modern browser that supports it.
